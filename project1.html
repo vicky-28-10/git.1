@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creative Registration Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('your-background-image.jpg'); /* Replace with your desired background */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Other CSS styles as needed */
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Join Our Community</h1>
+        <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name"><br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Create a strong password"><br><br>
+
+            <button type="submit">Join Now</button>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('registrationForm');
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // Basic validation
+            if (!firstName.value || !lastName.value || !email.value || !password.value) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Additional validation (e.g., email format, password strength)
+
+            // Submit the form (e.g., send data to a server)
+            // ...
+        });
+    </script>
+</body>
+</html>
